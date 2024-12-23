@@ -1,0 +1,41 @@
+{
+  "model": {
+    "type": "minecraft:condition",
+    "property": "minecraft:carried",
+    "on_true": {
+      "type": "minecraft:model",
+      "model": "tradingcards:item/3_000_mojangstudios"
+    },
+    "on_false": {
+      "type": "minecraft:select",
+    "cases": [
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "tradingcards:item/backing_netherite"
+        },
+        "when": [
+          "gui",
+          "ground",
+          "thirdperson_righthand",
+          "thirdperson_lefthand"
+        ]
+      },
+      {
+        "model": {
+          "type": "minecraft:model",
+          "model": "tradingcards:item/backing_netherite_held"
+        },
+        "when": [
+          "firstperson_lefthand"
+        ]
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "tradingcards:item/3_000_mojangstudios"
+    },
+    "property": "minecraft:display_context"
+    }
+  }
+}
